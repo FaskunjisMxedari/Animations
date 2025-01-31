@@ -1,0 +1,34 @@
+section{
+    width: 100vw;
+    height: 100vh;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas{
+    height: 7em;
+    width: 25em;
+    background-color: white;
+    border: 5px solid orange;
+    position: relative;
+    overflow: hidden;
+}
+
+.square{
+    height: 7em;
+    width: 7em;
+    background-color: orange;
+    position: absolute;
+    animation-name: leftToRight;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes leftToRight{
+    100% {right: calc(0% - 7em); }
+    0% {right: calc(100% + 7em); }
+}
